@@ -67,6 +67,15 @@ begin
 end;
 /
 
+--- %rowtype
+declare 
+    emp employees%rowtype;
+    
+begin
+    select * into emp from employees where id=1;
+    dbms_output.put_line('id: '||emp.id||':: name: '||emp.name||' :: Salary: '||emp.salary); 
+end;
+/
 
 --constants
 declare
@@ -174,6 +183,10 @@ end;
 set autoprint on;
 variable var2 number;
 exec :var2 :=89;
+
+
+
+
 
 
 
